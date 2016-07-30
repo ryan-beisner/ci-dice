@@ -1,0 +1,31 @@
+name: ci-dice
+confinement: strict
+version: 0.1
+architectures: [ all ]
+summary: "Console dice roller tool for CI pass/fail simulation"
+icon: assets/ci-dice-icon-256.png
+description: |
+    A simple tool to randomly pass or fail.  It is useful as a command or
+    module in a CI job to simulate, debug or build out CI pipelines.
+
+    While this is maintained by the Ubuntu OpenStack Engineering Team, it
+    is not specific to OpenStack use cases.  Any CI pipeline can use
+    ci-dice as a way to simulate, confirm and/or debug the pipeline's
+    behaviour.
+
+    * ci-dice      - roll the dice
+    * ci-dice.py   - same as just `ci-dice`
+    * ci-dice.sh   - legacy bash version
+
+    Contact and development:  freenode irc #openstack-charms
+apps:
+  ci-dice:
+    command: ci-dice
+  sh:
+    command: ci_dice.sh
+  py:
+    command: ci_dice.py
+parts:
+  ci-dice:
+    plugin: python3
+    source: .
