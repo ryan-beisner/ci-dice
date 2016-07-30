@@ -28,7 +28,7 @@ DEFAULT_CONFIG = {
     'dice': 2,         # Quantity of dice to roll
     'fatal': True,     # Exit non-zero when match condition is met
     'invert': False,   # Invert the behavior and odds
-    'symbols': False,   # Print dice symbols to the output
+    'symbols': False,  # Print dice symbols to the output
     'numerals': True,  # Print numerals to the output
     'exit': 127,       # Exit code for simulated fails
 }
