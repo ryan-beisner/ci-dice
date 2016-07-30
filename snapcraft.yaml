@@ -1,7 +1,7 @@
 name: ci-dice
 confinement: strict
 version: 0.1
-architectures: [ all ]
+architectures: [ amd64 ]
 summary: "Console dice roller tool for CI pass/fail simulation"
 icon: assets/ci-dice-icon-256.png
 description: |
@@ -29,3 +29,11 @@ parts:
   ci-dice:
     plugin: python3
     source: .
+  exec:
+    plugin: copy
+    files:
+      ci-dice: ci-dice
+      ci_dice.sh: ci_dice.sh
+      ci_dice.py: ci_dice.py
+      lib: lib
+      assets: assets
